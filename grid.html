@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Area</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            height: 100vh;
+            width: 100vw;
+            display: grid;
+            grid-template-columns: 1fr 150px;
+            grid-template-areas: 
+            "title title" 
+            "links sidebar"
+            "header sidebar"
+            "footer footer";
+            grid-template-rows: auto auto 1fr auto;
+        }
+
+        .title{
+            text-align: center;
+            background-color: rgb(34, 34, 101);
+            color: white;
+            border-bottom: 2px solid black;
+            grid-area: title;
+        }
+        .links{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            background-color: rgb(34, 34, 101);
+            grid-area: links;
+        }
+        .links a{
+            text-decoration: none;
+            color: white;
+        }
+        .sidebar{
+            background-color: rgb(34, 34, 101);
+            color: white;
+            grid-area: sidebar;
+        }
+        .footer{
+             background-color:rgb(34, 34, 101) ;
+             color: white;
+             text-align: center;
+             grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+    <div class="title">
+    Title
+    </div>
+    <div class="links">
+        <a href="#">home</a>
+        <a href="#">about</a>
+        <a href="#">contact</a>
+    </div>
+    <div class="header">
+        <h1>header</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, quidem soluta officiis illo eveniet cumque harum quos ex atque fugit facilis modi est provident esse repellendus doloribus aliquam fuga cupiditate?</p>
+    </div>
+    <div class="sidebar">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex quisquam nisi delectus animi itaque veniam dignissimos eius hic explicabo deserunt architecto quasi incidunt repellat ipsa, inventore labore quibusdam vero veritatis!</p>
+    </div>
+    <div class="footer">closing notes</div>
+
+   </div>
+</body>
+</html>
